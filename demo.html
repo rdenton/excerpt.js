@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>excerpt.js Demo - Automatically regenerate HTML content to fit in containers</title>
+	<style>
+		body {
+			margin: 0;
+			color: #444;
+			font-family: sans-serif;
+		}
+		
+		.box {
+			float: left;
+			margin-right: 20px;
+			background: #eee;
+			border: 1px solid #999;
+			padding: 10px;
+		}
+		
+		.box-1 {
+			width: 250px;
+			height: 250px;
+			
+		}
+		
+		.box-2 {
+			width: 125px;
+			height: 125px;
+		}
+		
+		.box-3 {
+			width: 200px;
+			height: 30px;
+		}
+		
+		h1, h2, h4 {
+			margin: 0;
+		}
+		
+		.head {
+			width: 80%;
+			margin: 50px auto;
+			text-align: center;
+			background: #eee;
+			border: 1px solid #999;
+			padding: 10px;
+		}
+		
+		.cf {
+			clear: both;
+		}
+		
+	</style>
+	<!--
+	The MIT License (MIT)
+	Copyright (C) 2013 Richard Denton, eMarketeer Australia
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	-->
+</head>
+<body>
+	
+	<div class="head">
+		<h1>excerpt.js</h1>
+		<p>Quick and easy html excerpt generation to deal with dynamic content overflow.</p>
+		<p><small>Written by Richard Denton at <a href="http://www.emarketeer.com.au/">eMarketeer Australia</a></small></p>
+		<ol>
+			<li>Specify your excerpt elements by using data-excerpt=[excerpt_length]</li>
+			<li>Insert excerpt.js at foot - &lt;script src="src/excerpt.js"&gt;&lt;/script&gt;&lt;/body&gt;</li>
+			<li>excerpt.js will hide original overflowing elements, and insert new, trimmed elements.</li>
+			<li>This allows search engines, scrapers and indexers to still read all original content, regardless of front end design.</li>
+		</ol>
+	</div>
+	
+	<h2>Generated excerpts using excerpt.js</h2>
+	<br />
+	
+	<div class="box box-1">
+		<p data-excerpt="325">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea reb.</p>
+	</div>
+	<div class="box box-2">
+		<span data-excerpt="65">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea reb.</span>
+	</div>
+	
+	<div class="box box-3">
+		<h4 data-excerpt="35">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut la</h4>
+	</div>
+	
+	<div class="cf"></div><br />
+	
+	<h2>Same example, without excerpt.js</h2><br />
+	
+	<div class="box box-1">
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea reb.</p>
+	</div>
+	<div class="box box-2">
+		<span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea reb.</span>
+	</div>
+	
+	<div class="box box-3">
+		<h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut la</h4>
+	</div>
+	
+	
+	<script src="src/excerpt.min.js"></script>
+</body>
+</html>
